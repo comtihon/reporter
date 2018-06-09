@@ -1,4 +1,4 @@
-# Advertisement reports collector
+# Advertisement reports collector [![Build Status](https://travis-ci.org/comtihon/reporter.svg?branch=master)](https://travis-ci.org/comtihon/reporter)
 This service reads reports from csv files at startup, saves to local
 postgres and renders statistics.
 
@@ -24,12 +24,12 @@ Ensure you have postgres available.
 ## Protocol:
 
 `/reports/<month>/<site>` - get report by month and site.
-Where:
+Where:  
 __month__ is a month of report. Can be a number `1-12`, or 3-letter code,
-`Jan`, `Dec` or a full case-insensitive name `january`, `December`.
+`Jan`, `Dec` or a full case-insensitive name `january`, `December`.  
 __site__ is a type or report. Available types: `desktop_web`,
-`mobile_web`, `android`, `iOS`.
-Response:
+`mobile_web`, `android`, `iOS`.  
+Response:  
 ```
 {
     "site": "desktop web",
@@ -47,15 +47,15 @@ Response:
 }
 ```
 
-`/reports/<month>?site=<site>&year=<year>` - previous request in another format.
-Where:
+`/reports/<month>?site=<site>&year=<year>` - previous request in another format.  
+Where:  
 __year__ year can be specified to retrieve reports by year-month pair.
-_Optional_: default: `2018`
+_Optional_: default: `2018`  
 __site__ here site is optional. If not specified - aggregate report for all
-sites of this month will be returned.
+sites of this month will be returned.  
 __month__ can be skipped if site is specified. Aggregate for all months
-of this site will be returned.
-Aggregate response for January:
+of this site will be returned.  
+Aggregate response for January:  
 ```
 {
     "requests": 34853988,
@@ -71,7 +71,7 @@ Aggregate response for January:
     "month": "January"
 }
 ```
-Aggregate response for Desktop:
+Aggregate response for Desktop:  
 ```
 {
     "site": "desktop web",
