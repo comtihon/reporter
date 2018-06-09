@@ -1,4 +1,4 @@
-# Advertisement reports collector [![Build Status](https://travis-ci.org/comtihon/reporter.svg?branch=master)](https://travis-ci.org/comtihon/reporter)
+# Advertisement reports collector
 This service reads reports from csv files at startup, saves to local
 postgres and renders statistics.
 
@@ -6,7 +6,7 @@ postgres and renders statistics.
 ### In docker
 Ensure you have your report data in `./data`
 
-    sudo ./gradlew build docker -x test -x test_integration
+    sudo ./gradlew build docker -x test
     sudo docker-compose up -d
 
 ### In OS
