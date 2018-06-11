@@ -27,4 +27,4 @@
 /.nb-gradle/
 
 postgres-data
-reports
+/reports
